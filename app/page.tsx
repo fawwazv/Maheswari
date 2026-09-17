@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -16,10 +17,13 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-surface-default/90 backdrop-blur-xl border-b border-border-refined shadow-[0_1px_12px_rgba(11,30,54,0.04)]">
         <div className="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 group">
-            <img
+            <Image
               alt="Maheswari Enterprise"
               className="h-8 w-auto object-contain"
-              src="https://lh3.googleusercontent.com/aida/AEtjO1XLXaw0-2_JbLLnB2At3SPdqRrTvby_SXBKPVorlI0OndYDcKVSMhlLEYwVx8cg-hWvSO4OBWmD8gl7E_4waAwrF-dsxk3zZBlmJqoblMqYElG9jDyP6-A7NArPqo0hSJYA5eO0mlVssiK2BdxuULmnNE4bjDY12Enr7J-QixkbFpbTgpWuqLzGVAm0MG5D1V2JOaLQjFhP9CQvd0iXMliheo_90ez7cO1vL_yBnLmP78hKj0bCr4kqP2U"
+              src="/assets/branding/logo-nav.png"
+              width={150}
+              height={72}
+              priority
             />
             <div className="flex flex-col leading-none">
               <span className="font-headline-sm text-headline-sm text-primary-container tracking-tight group-hover:text-secondary transition-colors">
@@ -35,11 +39,11 @@ export default function Home() {
             <a href="#tentang" className="py-1 font-label-md text-label-md text-on-surface-variant hover:text-primary-container transition-colors tracking-wide">
               Tentang Kami
             </a>
-            <a href="#paket-layanan" className="py-1 font-label-md text-label-md text-on-surface-variant hover:text-primary-container transition-colors tracking-wide">
-              Layanan & Paket
-            </a>
             <a href="#supercrew" className="py-1 font-label-md text-label-md text-on-surface-variant hover:text-primary-container transition-colors tracking-wide">
               Supercrew & Konsultan
+            </a>
+            <a href="#paket-layanan" className="py-1 font-label-md text-label-md text-on-surface-variant hover:text-primary-container transition-colors tracking-wide">
+              Layanan & Paket
             </a>
             <a href="#portofolio" className="py-1 font-label-md text-label-md text-on-surface-variant hover:text-primary-container transition-colors tracking-wide">
               Portofolio
@@ -72,10 +76,10 @@ export default function Home() {
       <main className="w-full pt-20 bg-surface min-h-screen">
         <div className="flex flex-col w-full">
           {/* HERO SECTION */}
-          <section className="relative w-full bg-surface-subtle overflow-hidden py-space-2xl lg:py-space-3xl">
-            <div className="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-                <div className="lg:col-span-7 flex flex-col items-start">
+          <section className="relative w-full bg-surface-subtle overflow-hidden py-6 lg:py-8 min-h-[calc(100vh-5rem)] lg:min-h-[calc(100dvh-5rem)] flex items-center">
+            <div className="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter w-full">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                <div className="lg:col-span-7 flex flex-col items-start justify-center">
                   <h1 className="font-display-xl text-display-xl lg:text-display-xl text-primary-container tracking-tight mb-space-md leading-[1.1]">
                     Perencanaan Pernikahan Impian dengan Sentuhan{" "}
                     <span className="italic font-normal text-secondary">Elegan & Profesional</span>
@@ -98,13 +102,13 @@ export default function Home() {
                     </a>
                     <a
                       href="#paket-layanan"
-                      className="inline-flex items-center justify-center px-7 py-3.5 rounded font-label-lg text-label-lg text-primary-container bg-surface-default hover:bg-surface-muted shadow-sm transition-all border border-border-refined"
+                      className="inline-flex items-center justify-center px-7 py-3.5 rounded-full font-label-lg text-label-lg text-primary-container bg-surface-default hover:bg-surface-muted shadow-sm transition-all border border-border-refined"
                     >
                       Jelajahi Paket Layanan
                     </a>
                   </div>
 
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full pt-space-xl mt-space-xl bg-surface-default/60 rounded-xl p-4 shadow-sm border border-border-refined/50">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full mt-6 lg:mt-8 bg-surface-default/60 rounded-xl p-4 shadow-sm border border-border-refined/50">
                     <div>
                       <div className="font-display-lg text-headline-lg text-primary-container font-bold">500+</div>
                       <div className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Pernikahan</div>
@@ -127,10 +131,13 @@ export default function Home() {
                 <div className="lg:col-span-5 relative flex justify-center">
                   <div className="relative w-full max-w-md lg:max-w-none">
                     <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-xl bg-surface-container relative">
-                      <img
+                      <Image
                         alt="Konsultasi Perencanaan Pernikahan Bersama Maheswari Enterprise"
                         className="w-full h-full object-cover object-center"
-                        src="https://lh3.googleusercontent.com/aida/AEtjO1WuEKYzufE5FZ4oEjSoE7HTJ3KxY8BAxjG1L-b-m9DR0QXppWAT2z-i2q_cPx6v7FbRmH3otWeRudPmOeAY_3gVNEikqIjRKdoAH5bmYY3XzVFa9tT0gMbWSYnddFKaVPtmMjm8b5vJh89qQaB_e7SfNNizX-y6UwhiLvmdMi2IdIH1hr5Pj03qqhirGe6RBNh8JD3cWdBR1xY1pzR2mcxRgr1waeHbnu5yHTwpxEyuxTNHIskdh1oy-es"
+                        src="/assets/portfolio/dian-aldi.jpg"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                        priority
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent"></div>
                       <div className="absolute bottom-6 left-6 right-6 text-on-primary">
@@ -259,11 +266,13 @@ export default function Home() {
               </div>
 
               <div className="mb-10 bg-surface-default rounded-xl overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12 border border-border-refined/60">
-                <div className="lg:col-span-7 h-72 lg:h-auto overflow-hidden">
-                  <img
+                <div className="lg:col-span-7 h-72 lg:h-auto overflow-hidden relative min-h-[288px]">
+                  <Image
                     alt="Technical Meeting Maheswari Supercrew"
-                    className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida/AEtjO1XBty4AdkSxjZxzfWXcik9MLyuT9Ja-RpXQDgy3orakiQS6eeOK-3R4C_esGAv0NbVZoKXVzifYlIYXgUzihi_GAgQ3GnUoeVh8wXvIY1hSwbGLQF0Qrlyh0l-HFaGccufcqewcUU8fSLo2sKT863lfk8kjFvTDDartq7ExeZZO_HomZqvZ1AE20E77s5Mx8PXNkExYHPEk9BB6vzQj4LXpnvGY_vTN3fq2fnVVa9SVfogggdZNn1o-4UI"
+                    className="object-cover"
+                    src="/assets/keunggulan/technial-meeting.png"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 58vw"
                   />
                 </div>
                 <div className="lg:col-span-5 p-8 flex flex-col justify-center">
@@ -302,6 +311,7 @@ export default function Home() {
                     name: "Arki Aji Pangestu, S.T., M.T.",
                     role: "Senior Consultant & MC Pro",
                     spec: "Luxury Grand Ballroom & Upacara Formal",
+                    photo: "/assets/consultants/arki.jpg",
                   },
                   {
                     initials: "DH",
@@ -309,6 +319,7 @@ export default function Home() {
                     name: "Didit Hardiyanto, S.Pd.",
                     role: "Senior Wedding Consultant",
                     spec: "Intimate & Rustic Garden Concept",
+                    photo: "/assets/consultants/didit.jpg",
                   },
                   {
                     initials: "RN",
@@ -316,6 +327,7 @@ export default function Home() {
                     name: "Rifa Nurfalah, S.Kom.",
                     role: "Consultant & Coordinator",
                     spec: "Tech-Driven Rundown & Creative Content",
+                    photo: "/assets/consultants/rifa.jpg",
                   },
                   {
                     initials: "DW",
@@ -323,6 +335,7 @@ export default function Home() {
                     name: "Dedi Wardul Qoryah, S.P.",
                     role: "Production & Vendor Lead",
                     spec: "Tenda Megah & Rigging Production",
+                    photo: "/assets/consultants/dedi.jpg",
                   },
                   {
                     initials: "AT",
@@ -330,6 +343,7 @@ export default function Home() {
                     name: "Agung Tamrin, S.Ap.",
                     role: "F&B & Protocol Lead",
                     spec: "VIP Protocol & Precision Catering Flow",
+                    photo: "/assets/consultants/agung.jpg",
                   },
                 ].map((c) => (
                   <div
@@ -337,8 +351,14 @@ export default function Home() {
                     className="bg-surface-default p-6 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-border-refined/60"
                   >
                     <div>
-                      <div className="w-14 h-14 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-display-lg text-headline-sm font-semibold mb-4">
-                        {c.initials}
+                      <div className="w-14 h-14 rounded-full overflow-hidden bg-primary-container flex items-center justify-center mb-4 ring-1 ring-border-refined">
+                        <Image
+                          alt={c.name}
+                          src={c.photo}
+                          width={56}
+                          height={56}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="inline-block px-2 py-0.5 rounded bg-surface-muted text-secondary font-label-sm text-label-sm mb-2">
                         Jadwal: {c.jadwal}
@@ -702,6 +722,45 @@ export default function Home() {
             </div>
           </section>
 
+          {/* LAYANAN TAMBAHAN — scraped from live addons */}
+          <section className="py-space-2xl bg-surface-subtle border-y border-border-refined/40">
+            <div className="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
+              <div className="text-center max-w-2xl mx-auto mb-8">
+                <span className="font-label-md text-label-md text-secondary uppercase tracking-widest font-semibold block mb-2">
+                  Layanan Tambahan
+                </span>
+                <h2 className="font-display-lg text-display-lg text-primary-container font-medium tracking-tight">
+                  Special Effects & Hiburan Opsional
+                </h2>
+                <p className="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Tambahkan sentuhan dramatis dari koleksi asli Maheswari — tidak termasuk paket WO Only, tersedia sebagai add-on.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { src: "/assets/addons/firework.jpg", label: "Firework & Electric Confetti", desc: "Entrance & penutup spektakuler" },
+                  { src: "/assets/addons/beam4.jpg", label: "Moving Beam - 4 Unit", desc: "Pencahayaan dinamis panggung" },
+                  { src: "/assets/addons/violin.png", label: "Saxophone / Violin", desc: "Instrumental penyambutan tamu" },
+                  { src: "/assets/addons/balon.jpg", label: "Balon Helium", desc: "Dekoratif & pelepasan balon" },
+                  { src: "/assets/addons/dry-ice.jpg", label: "Dry Ice", desc: "Efek kabut entrance pengantin" },
+                  { src: "/assets/addons/mahes-music.jpg", label: "Mahes Music", desc: "Live band & hiburan" },
+                  { src: "/assets/addons/upacara-adat.jpg", label: "Upacara Adat", desc: "Mapag Panganten & tradisi Sunda" },
+                  { src: "/assets/addons/mahes-ayu.png", label: "Mahes Ayu", desc: "Prosesi & rias adat" },
+                ].map((a) => (
+                  <div key={a.label} className="group bg-surface-default rounded-xl overflow-hidden shadow-sm border border-border-refined/50 hover:shadow-md transition-all">
+                    <div className="aspect-[4/3] relative overflow-hidden bg-surface-muted">
+                      <Image src={a.src} alt={a.label} fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    </div>
+                    <div className="p-3">
+                      <div className="font-label-md text-label-md text-primary-container font-semibold leading-tight">{a.label}</div>
+                      <div className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">{a.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* GALLERY */}
           <section id="portofolio" className="py-space-3xl bg-surface-subtle">
             <div className="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
@@ -726,47 +785,49 @@ export default function Home() {
               <div className="flex flex-row flex-nowrap overflow-x-auto gap-4 pb-2 snap-x snap-mandatory scrollbar-thin">
                 {[
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBTHSVUkb5qH0uwCstGaYHQmoagNJW5KfPR2yQxt_5UWomCRApClB_DBP-52C0lR5RArGOljZgVhrNQaK7nhYDJZoT54YkYBAO4Fv_8LPhDlF05FbcDrkKHLbUxje-o-Z0kjmlL4pm9TOSMoX_9YkFtQes0muKd9AyPvBsENQLvRUeHJLUMY0OzY5lq7WC99DtkdbyOdlZfFzYqkDxpaRVy4xG30vOsq0UROIV6WjW9rBxz2B9QaUhY",
+                    img: "/assets/portfolio/dian-aldi.jpg",
                     loc: "Ballroom Reception • Majalengka",
                     name: "Dian & Aldi",
                     desc: "Orkestrasi 800 tamu dengan prosesi mapag panganten kontemporer yang khidmat.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZoo-j_jMx_V63W5nKqpASaBljc0S_RrlW2VLNZz9IxJ2oZbMpnzaMiUz_W1G2mMZw5hiCzXnzOt7kfmVfoTCvpjCYxRG3FCEE6h_L_8V1lpiIluCL9kOGm1QkIqmwB1E2CempSkmKI3wzSokZq_BW5v9OxK32q8m3eR06n9n7TC0lsthcNpj2hZ8dKbniP_keK6_1aFmmnvVTFsqXGq1SoSqsm9zHlPjutWXhuvdois_QCIzenRXf",
+                    img: "/assets/portfolio/karin-prima.jpg",
                     loc: "Sacred Akad Nikah • Cirebon",
                     name: "Karin & Prima",
                     desc: "Ijab kabul syahdu dengan koordinasi flow keluarga inti yang tertib dan damai.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCbPLyFFpDVA2Edb52ShPkvhcFpE0YFkOkObkAfaWMR3T5a6VimJJO38e7PkDFxLmo4w-2q2XYGAelk9CMjoJoTNjgmiT7edYU2efNmLnbERp3c-fI0tR06Q23H0Iu2YY0ApAze3pFlwzF1Qrhc1QSyVZgVkUk0xtJv91GrexrVTt6hhkVpbI-4tgyN1cDjv_c3xPHHabOPLMOCnTxIwOxOZ_agZX8nZ_KMSEdZlDqDF9iIL9ARcbO1",
+                    img: "/assets/portfolio/selmi-musa.jpg",
                     loc: "Garden Intimate • Kuningan",
                     name: "Selmi & Musa",
                     desc: "Perayaan intim dengan sentuhan jazz akustik dan tata cahaya sunset hangat.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD2QsE0lY9U61x60vhT0QZ9g6DthSFW9c15W45B8IqcR0cah8YpBkHYbt_b17mpTVGo6kMTHk_oQ20VLa3SfKvxSiq4o8ePaeMzBsi64I0F_mwikgGPZu9nIZMTikJL3dWcnEWzZxBHOnvEFs8Hf2Ok5mjmLYsQr7SzCkwxrsYS0_WFtCxAh9C_V0zsb02A7S1jjCrXtcVLP6PvKq2nYdcbcQ6NZK7hsfOqptq-2SMIC4Ez7u97wsKi",
+                    img: "/assets/portfolio/putri-adit.jpg",
                     loc: "Table Architecture • Indramayu",
                     name: "Putri & Adit",
                     desc: "Detailing dekorasi 8 meter dengan harmoni bunga segar dan pencahayaan LED presisi.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCFUBRflBrrT_zrdEjXP8xMKwR28LWlmZk46-Xla5bw417cJLhooaAkFrnanlFm45Vuc2rzVKqVdouIujBvfS-UrqSnZ1h--GtU4ATzNqBwmX3A_ViQJM_44AN7qWw8OPPoxRAFum2YphtHiNEJuqyktkav9bx_LvZpeZepZnJCfCJKrmYnMPi4f1DAlm4ndnCgk_d_Wg0YCg7R3v3CfD3sFpAUg3OBnA3ReEOLiblf6Hisl6Sw1PVH",
+                    img: "/assets/portfolio/neni-firman.jpg",
                     loc: "Supercrew On Duty",
                     name: "Neni & Firman",
                     desc: "Kedisiplinan waktu rangkaian kirab pengantin dan live feeding tamu tanpa antrean.",
                   },
                   {
-                    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCJHhqa_0tPSJymiETISI5tUA8AvnEEw0osjPlVD_2O08Iv8MOk_qw82yxYitkstJb-ljVsEkpEBTDPWtSwkXoRhpzvb3oo5hTf03jg96_z6GwFKiCRGVLujpU07vg_dpEJ2wM-DLJdhqRslmch93mg8-N8Qzdi8KCcip3VDVB0ste-Dq4N9XJKOBR8DpRdJOpGh5h8gp2or89lUaphfwlPINUtS0JEvs9i832eqrev8YxRdjVJGK9s",
+                    img: "/assets/portfolio/viona-syukron.jpg",
                     loc: "Prewedding Editorial",
                     name: "Viona & Syukron",
                     desc: "Sesi foto tematik konsep monokrom editorial sebelum peluncuran undangan digital.",
                   },
                 ].map((item) => (
                   <div key={item.name} className="shrink-0 w-[85%] sm:w-[340px] lg:w-[360px] snap-start group relative rounded-xl overflow-hidden shadow-sm aspect-[4/5] bg-surface-container">
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    <Image
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                       src={item.img}
                       alt={item.name}
+                      fill
+                      sizes="360px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
                     <div className="absolute bottom-6 left-6 right-6 text-on-primary">
@@ -863,16 +924,19 @@ export default function Home() {
                     name: "SELMI & MUSA",
                     loc: "Intimate Garden Wedding • Majalengka",
                     text: "“Terima kasih untuk tim Maheswari Enterprise yang sudah membantu acara kami berjalan dengan sangat rapi. Dari awal konsultasi sampai hari H, semuanya terasa lebih tenang karena tim sangat responsif, detail, dan benar-benar membantu kami di setiap proses.”",
+                    photo: "/assets/testimonials/selmi-musa.jpg",
                   },
                   {
                     name: "PUTRI & ADIT",
                     loc: "Grand Ballroom Reception • Cirebon",
                     text: "“Kami merasa sangat terbantu dengan koordinasi vendor dan technical meeting yang disiapkan Maheswari. Banyak hal yang awalnya membuat kami bingung jadi lebih jelas dan terarah. Hasilnya, acara berjalan lancar dan kami bisa menikmati momen tanpa terlalu stres.”",
+                    photo: "/assets/testimonials/putri-adit.jpg",
                   },
                   {
                     name: "KARIN & PRIMA",
                     loc: "Traditional Akad & Reception • Kuningan",
                     text: "“Salah satu hal yang paling kami suka adalah cara tim Maheswari mendampingi kami dengan sabar dan terstruktur. Pilihan paketnya fleksibel, koordinasinya bagus, dan pada hari acara semua terasa lebih tertib, nyaman, dan berkesan.”",
+                    photo: "/assets/testimonials/karin-prima.jpg",
                   },
                 ].map((t) => (
                   <div
@@ -880,12 +944,17 @@ export default function Home() {
                     className="bg-surface-default p-8 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60"
                   >
                     <div>
-                      <div className="flex items-center gap-1 text-secondary mb-3">
-                        {[...Array(5)].map((_, i) => (
-                          <span key={i} className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 1" }}>
-                            star
-                          </span>
-                        ))}
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-muted ring-1 ring-border-refined shrink-0">
+                          <Image alt={t.name} src={t.photo} width={40} height={40} className="w-full h-full object-cover" />
+                        </div>
+                        <div className="flex items-center gap-0.5 text-secondary">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i} className="material-symbols-outlined text-[16px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                              star
+                            </span>
+                          ))}
+                        </div>
                       </div>
                       <p className="font-body-md text-body-md text-text-charcoal italic leading-relaxed my-4">{t.text}</p>
                     </div>
@@ -1078,10 +1147,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-white/15">
             <div className="lg:col-span-4 flex flex-col gap-4">
               <div className="flex items-center gap-3 bg-white/5 p-2 rounded-xl w-fit backdrop-blur-sm border border-white/10">
-                <img
+                <Image
                   alt="Maheswari Enterprise"
                   className="h-9 w-auto object-contain brightness-0 invert"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo32QncPCZtM1O-5O--lhVbhRCyBrM-Pv_dlNdA5HwkXsF-ZfFyJ06KPp-WFXsswN7xGcKBXUdtguE_vky_EPRy6FC0N8Zc4O73eHxXYFQ2JRATphg9mOhzWkdEABiNX9JbmQwploPA7liDVNNgOIJDHC-O-7q32YBiR0ApuCPB6keTnw1fgVG_l4SAhTwq7Jfln3GiWy_MSpl8rlXaUNaQ7zIpwy1ESXljdN0TvePaqkdt4pvhRV0"
+                  src="/assets/branding/logo-nav.png"
+                  width={120}
+                  height={58}
                 />
                 <span className="font-headline-sm text-headline-sm text-on-primary">Maheswari</span>
               </div>
