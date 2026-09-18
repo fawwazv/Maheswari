@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-gutter-mobile lg:px-gutter">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-white/15">
           <div className="lg:col-span-4 flex flex-col gap-4">
-            <div className="flex items-center gap-3 bg-white/5 p-2 rounded-xl w-fit backdrop-blur-sm border border-white/10">
+            <div className="flex items-center gap-3">
               <Image alt="Maheswari Enterprise" className="h-9 w-auto object-contain brightness-0 invert" src="/assets/branding/logo-nav.png" width={120} height={36} />
               <span className="font-headline-sm text-headline-sm text-on-primary">Maheswari</span>
             </div>
