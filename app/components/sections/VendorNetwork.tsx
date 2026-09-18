@@ -20,7 +20,8 @@ export function VendorNetwork() {
             </div>
           </div>
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {/* Mobile: grid 2 kolom tetap, tapi gap lebih rapat */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 lg:gap-4">
               <div className="p-4 rounded-xl bg-surface-subtle shadow-sm border border-border-refined/50"><div className="font-label-md text-label-md font-bold text-primary-container mb-1">Pilihan Venue</div><p className="font-body-sm text-body-sm text-on-surface-variant">Islamic Center, Fieris Hotel, Metland Smara, Fitra Hotel</p></div>
               <div className="p-4 rounded-xl bg-surface-subtle shadow-sm border border-border-refined/50"><div className="font-label-md text-label-md font-bold text-primary-container mb-1">MUA & Attire</div><p className="font-body-sm text-body-sm text-on-surface-variant">Adi Rustana, Veny Fadila, Umam Makeup, Caesar Jumantri</p></div>
               <div className="p-4 rounded-xl bg-surface-subtle shadow-sm border border-border-refined/50"><div className="font-label-md text-label-md font-bold text-primary-container mb-1">Dekorasi</div><p className="font-body-sm text-body-sm text-on-surface-variant">Edelweis Decoration, Honey Decor, Sena Decor, Retno Maulani</p></div>

@@ -9,7 +9,8 @@ export function Addons() {
           <h2 className="font-display-lg text-display-lg text-primary-container font-medium tracking-tight">Special Effects & Hiburan Opsional</h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-2">Tambahkan sentuhan dramatis dari koleksi asli Maheswari — tidak termasuk paket WO Only, tersedia sebagai add-on.</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Mobile: 1 baris horizontal scroll, desktop 4 kolom */}
+        <div className="flex flex-nowrap overflow-x-auto gap-4 pb-2 snap-x snap-mandatory scrollbar-thin md:grid md:grid-cols-4 md:overflow-visible md:pb-0 -mx-gutter-mobile px-gutter-mobile md:mx-0 md:px-0">
           {[
             { src: "/assets/addons/firework.jpg", label: "Firework & Electric Confetti", desc: "Entrance & penutup spektakuler" },
             { src: "/assets/addons/beam4.jpg", label: "Moving Beam - 4 Unit", desc: "Pencahayaan dinamis panggung" },
@@ -20,7 +21,7 @@ export function Addons() {
             { src: "/assets/addons/upacara-adat.jpg", label: "Upacara Adat", desc: "Mapag Panganten & tradisi Sunda" },
             { src: "/assets/addons/mahes-ayu.png", label: "Mahes Ayu", desc: "Prosesi & rias adat" },
           ].map((a) => (
-            <div key={a.label} className="group bg-surface-default rounded-xl overflow-hidden shadow-sm border border-border-refined/50 hover:shadow-md transition-all">
+            <div key={a.label} className="shrink-0 snap-start w-[44%] sm:w-[220px] md:w-auto md:shrink group bg-surface-default rounded-xl overflow-hidden shadow-sm border border-border-refined/50 hover:shadow-md transition-all">
               <div className="aspect-[4/3] relative overflow-hidden bg-surface-muted">
                 <Image src={a.src} alt={a.label} fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>

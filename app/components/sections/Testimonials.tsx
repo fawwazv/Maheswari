@@ -7,13 +7,14 @@ export function Testimonials() {
           <h2 className="font-display-lg text-display-lg text-primary-container font-medium tracking-tight">Kesan Hangat dari Pengantin Maheswari</h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-2">Bagi kami, keberhasilan sebuah pesta pernikahan diukur dari ketenangan hati pengantin dan kebahagiaan seluruh keluarga.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile: 1 baris horizontal scroll, desktop 3 kolom */}
+        <div className="flex flex-nowrap overflow-x-auto gap-4 pb-2 snap-x snap-mandatory scrollbar-thin lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0 -mx-gutter-mobile px-gutter-mobile lg:mx-0 lg:px-0">
           {[
             { name: "SELMI & MUSA", loc: "Intimate Garden Wedding • Majalengka", text: "“Terima kasih untuk tim Maheswari Enterprise yang sudah membantu acara kami berjalan dengan sangat rapi. Dari awal konsultasi sampai hari H, semuanya terasa lebih tenang karena tim sangat responsif, detail, dan benar-benar membantu kami di setiap proses.”" },
             { name: "PUTRI & ADIT", loc: "Grand Ballroom Reception • Cirebon", text: "“Kami merasa sangat terbantu dengan koordinasi vendor dan technical meeting yang disiapkan Maheswari. Banyak hal yang awalnya membuat kami bingung jadi lebih jelas dan terarah. Hasilnya, acara berjalan lancar dan kami bisa menikmati momen tanpa terlalu stres.”" },
             { name: "KARIN & PRIMA", loc: "Traditional Akad & Reception • Kuningan", text: "“Salah satu hal yang paling kami suka adalah cara tim Maheswari mendampingi kami dengan sabar dan terstruktur. Pilihan paketnya fleksibel, koordinasinya bagus, dan pada hari acara semua terasa lebih tertib, nyaman, dan berkesan.”" },
           ].map((t) => (
-            <div key={t.name} className="bg-surface-default p-8 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60">
+            <div key={t.name} className="shrink-0 snap-start w-[88%] sm:w-[360px] lg:w-auto bg-surface-default p-8 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60">
               <div>
                 <div className="flex items-center gap-1 text-secondary mb-3" aria-hidden>
                   {[...Array(5)].map((_, i) => (

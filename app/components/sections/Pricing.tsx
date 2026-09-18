@@ -18,8 +18,8 @@ export function Pricing() {
         </div>
 
         {activeTab === "wo" ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60 hover:shadow-md transition-all">
+          <div className="flex flex-nowrap overflow-x-auto gap-4 pb-2 snap-x snap-mandatory scrollbar-thin lg:grid lg:grid-cols-4 lg:overflow-visible lg:pb-0 -mx-gutter-mobile px-gutter-mobile lg:mx-0 lg:px-0">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[320px] lg:w-auto bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60 hover:shadow-md transition-all">
               <div>
                 <div className="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Tier Coordination</div>
                 <h3 className="font-headline-md text-headline-md text-primary-container mt-1">LEGISEU</h3>
@@ -38,7 +38,7 @@ export function Pricing() {
               <a href={WA_LINKS.legiseu} target="_blank" rel="noopener noreferrer" className="w-full text-center py-2.5 rounded bg-surface-default text-primary-container font-label-md text-label-md hover:bg-surface-container transition-all border border-border-refined">Konsultasikan Legiseu</a>
             </div>
 
-            <div className="bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60 hover:shadow-md transition-all">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[320px] lg:w-auto bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60 hover:shadow-md transition-all">
               <div>
                 <div className="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Recommended Scale</div>
                 <h3 className="font-headline-md text-headline-md text-primary-container mt-1">NISKALA</h3>
@@ -57,7 +57,7 @@ export function Pricing() {
               <a href={WA_LINKS.niskala} target="_blank" rel="noopener noreferrer" className="w-full text-center py-2.5 rounded bg-surface-default text-primary-container font-label-md text-label-md hover:bg-surface-container transition-all border border-border-refined">Konsultasikan Niskala</a>
             </div>
 
-            <div className="bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60 hover:shadow-md transition-all">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[320px] lg:w-auto bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60 hover:shadow-md transition-all">
               <div>
                 <div className="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">With Master of Ceremony</div>
                 <h3 className="font-headline-md text-headline-md text-primary-container mt-1">ABIMANA</h3>
@@ -75,7 +75,7 @@ export function Pricing() {
               <a href={WA_LINKS.abimana} target="_blank" rel="noopener noreferrer" className="w-full text-center py-2.5 rounded bg-surface-default text-primary-container font-label-md text-label-md hover:bg-surface-container transition-all border border-border-refined">Konsultasikan Abimana</a>
             </div>
 
-            <div className="bg-primary-container text-on-primary p-6 rounded-xl shadow-xl flex flex-col justify-between relative overflow-hidden">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[320px] lg:w-auto bg-primary-container text-on-primary p-6 rounded-xl shadow-xl flex flex-col justify-between relative overflow-hidden">
               <div className="absolute top-4 right-4 px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">Flagship</div>
               <div>
                 <div className="font-label-sm text-label-sm uppercase tracking-wider text-secondary-fixed">Full Wedding Management</div>
@@ -95,8 +95,8 @@ export function Pricing() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60">
+          <div className="flex flex-nowrap overflow-x-auto gap-4 pb-2 snap-x snap-mandatory scrollbar-thin lg:grid lg:grid-cols-3 lg:overflow-visible lg:pb-0 -mx-gutter-mobile px-gutter-mobile lg:mx-0 lg:px-0">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[340px] lg:w-auto bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60">
               <div>
                 <div className="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Solusi Rumah Lengkap</div>
                 <h3 className="font-headline-md text-headline-md text-primary-container mt-1">Paket Rumah Elegan</h3>
@@ -111,7 +111,7 @@ export function Pricing() {
               <a href={WA_LINKS.rumah} target="_blank" rel="noopener noreferrer" className="mt-6 w-full text-center py-2.5 rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all">Konsultasi Paket Rumah</a>
             </div>
 
-            <div className="bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[340px] lg:w-auto bg-surface-subtle p-6 rounded-xl shadow-sm flex flex-col justify-between border border-border-refined/60">
               <div>
                 <div className="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Ballroom & Convention</div>
                 <h3 className="font-headline-md text-headline-md text-primary-container mt-1">Paket Gedung / Ballroom</h3>
@@ -126,7 +126,7 @@ export function Pricing() {
               <a href={WA_LINKS.gedung} target="_blank" rel="noopener noreferrer" className="mt-6 w-full text-center py-2.5 rounded bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-all">Konsultasi Paket Gedung</a>
             </div>
 
-            <div className="bg-surface-default p-6 rounded-xl shadow-sm border border-border-refined flex flex-col justify-between">
+            <div className="shrink-0 snap-start w-[85%] sm:w-[340px] lg:w-auto bg-surface-default p-6 rounded-xl shadow-sm border border-border-refined flex flex-col justify-between">
               <div>
                 <div className="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-on-surface-variant">Layanan Tambahan Opsional</div>
                 <h3 className="font-headline-md text-headline-md text-primary-container mt-1">Custom Special Effects</h3>

@@ -42,7 +42,8 @@ export function Supercrew() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-5">
+        {/* Mobile: 1 baris horizontal scroll (swipe), Desktop: 5 kolom 1 baris grid */}
+        <div className="flex flex-nowrap overflow-x-auto gap-4 pb-2 snap-x snap-mandatory scrollbar-thin xl:grid xl:grid-cols-5 xl:overflow-visible xl:pb-0 -mx-gutter-mobile px-gutter-mobile lg:mx-0 lg:px-0">
           {[
             { initials: "AA", jadwal: "Sen, Rab, Jum", name: "Arki Aji Pangestu, S.T., M.T.", role: "Senior Consultant & MC Pro", spec: "Luxury Grand Ballroom & Upacara Formal", photo: "/assets/consultants/arki.jpg" },
             { initials: "DH", jadwal: "Sel - Ming", name: "Didit Hardiyanto, S.Pd.", role: "Senior Wedding Consultant", spec: "Intimate & Rustic Garden Concept", photo: "/assets/consultants/didit.jpg" },
@@ -52,26 +53,22 @@ export function Supercrew() {
           ].map((c) => (
             <div
               key={c.initials}
-              className="bg-surface-default rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-border-refined/60 group"
+              className="shrink-0 snap-start w-[78%] sm:w-[280px] xl:w-auto xl:shrink bg-surface-default rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden border border-border-refined/60 group"
             >
-              {/* Foto besar — jelas muka seperti [Image 1], card tipis tetap di belakang */}
               <div className="relative w-full aspect-[1/1.05] bg-white overflow-hidden">
                 <Image
                   alt={c.name}
                   src={c.photo}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                  sizes="(max-width: 640px) 78vw, 280px"
                   className="object-contain object-top pt-3 group-hover:scale-[1.02] transition-transform duration-500"
                   priority={c.initials === "RN" || c.initials === "DW" || c.initials === "AT"}
                 />
-                {/* Oval bottom ala screenshot — tetap card tipis, hanya lengkungan putih di bawah foto */}
                 <div className="absolute bottom-0 left-0 right-0 h-[18%] bg-white" style={{ borderRadius: "50% 50% 0 0 / 100% 100% 0 0", transform: "scaleX(1.4)" }} aria-hidden />
               </div>
-              {/* Teks center seperti [Image 1] + info tambahan yang direkomendasikan */}
               <div className="flex flex-col items-center text-center px-4 pt-3 pb-5 flex-1">
                 <h4 className="font-headline-sm text-headline-sm text-primary-container font-semibold leading-tight">{c.name}</h4>
                 <p className="font-body-sm text-body-sm text-on-surface-variant mt-1">{c.jadwal}</p>
-                {/* Rekomendasi: tetap tampilkan role & spesialisasi sebagai secondary info — tidak ada di screenshot tapi penting untuk kredibilitas */}
                 <p className="font-label-sm text-label-sm text-on-surface-variant/80 uppercase tracking-wider mt-2 line-clamp-1">{c.role}</p>
                 <p className="font-body-sm text-body-sm text-on-surface-variant/70 italic mt-1 leading-snug line-clamp-2">Spesialisasi: {c.spec}</p>
               </div>
